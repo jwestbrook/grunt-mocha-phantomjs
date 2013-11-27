@@ -30,28 +30,9 @@ module.exports = function(grunt) {
       }
     },
     mocha_phantomjs: {
-      no_output: {
-        options: {
-          'reporter': 'dot'
-        },
-        files: {
-          src: ['test/index.html']
-        }
-      },
-      output: {
-        options: {
-          'reporter': 'dot',
-          'output': 'results/result.txt'
-        },
-        files: {
-          src: ['test/index.html']
-        }
-      },
-      server: {
         options: {
           urls: ['http://localhost:8000/test/index.html'],
           'reporter': 'dot'
-        }
       }
     }
   });
